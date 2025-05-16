@@ -21,7 +21,9 @@ public class TrianguloRectangulo {
 	 * @param a cateto 1
 	 * @param b cateto 2
 	 */
-	public TrianguloRectangulo(int a, int b) {
+	public TrianguloRectangulo(int a, int b) throws IllegalArgumentException{
+		if (a < 0 || b < 0)
+			throw new IllegalArgumentException("Los catetos no pueden ser negativos");
 		this.a = a;
 		this.b = b;
 	}
@@ -39,7 +41,7 @@ public class TrianguloRectangulo {
 	 * @return la hipotenusa "c"
 	 */
 	public double hipotenusa() {
-		return (Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)));
+		return Math.round((Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))) * 100.0) / 100.0;
 	}
 	
 	/**
