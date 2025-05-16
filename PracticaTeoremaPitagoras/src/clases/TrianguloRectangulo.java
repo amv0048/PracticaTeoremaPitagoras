@@ -3,7 +3,9 @@ package clases;
 public class TrianguloRectangulo {
 	
 	
-	private int a, b, c;
+	private int a; 
+	private int b;
+	private double c;
 	
 	/**
 	 * Crea un triangulo rectangulo por defecto con el valor 1 en
@@ -65,7 +67,7 @@ public class TrianguloRectangulo {
 	public void setB(int b) {
 		this.b = b;
 	}
-	public int getC() {
+	public double getC() {
 		return c;
 	}
 	public void setC(int c) {
